@@ -1,0 +1,17 @@
+定时器：
+    间隔型定时器：
+        setInterval(function(){方法},时间)
+        每隔多少秒执行一次
+    延时型定时器
+        setTimeout(function(){方法},时间)
+        多少秒之后在执行
+清除定时器：
+    清除间隔型定时器：
+        clearInterval();
+    清除延时型定时器:
+        clearTimeout()
+
+ disabled = true  禁止再次点击
+
+ 任何数和字符串相加时+号是链接符。
+ 任何数和字符串相减时就把字符串转换成数字

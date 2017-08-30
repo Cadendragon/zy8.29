@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [9,19,29,31,41,51];
+		function avg(array){
+			var sum = 0;   /*给总数赋值*/
+			for(var i=0; i<array.length; i++){
+				sum = sum + array[i];   /*sum等于（从0开始相对应的数组数依次下去相加*/
+			}
+			return sum / array.length;  /*把总和除以数组长度返回给上面*/
+		}
+		alert(avg(arr));
+	</script>
+
+	<script>
+		var arr = [1,2,3,4,5,6];
+		function avg(array){
+			var sum = 0;
+			for(var i=0; i<array.length; i++){
+				sum = sum + array[i]
+			}
+			return sum / array.length
+		}
+		console.log(avg(arr));
+	</script>
+
+	<script>
+		var arr = [1,2,3,4,5,6,7];
+		function avg(array){
+			var sum = 0;
+			var len = array.length;
+			for(var i=0; i<len; i++){
+				sum = sum + array[i]
+			}
+			return sum / len;
+		}
+		console.log(avg(arr));
+	</script>
+</body>
+</html>

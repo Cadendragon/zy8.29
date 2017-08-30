@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="开始" id="btn1">
+	<input type="button" value="关闭" id="btn2">
+	<div id="box"></div>
+</body>
+</html>
+<script>
+	function $(id){
+		return document.getElementById(id);
+	}
+	var timer = null;
+	$('btn1').onclick = function(){
+		timer = setTimeout(function(){
+			$('box').style.backgroundColor = "blue";
+		},3000);
+	}
+</script>

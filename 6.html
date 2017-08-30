@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div,ul,li{margin: 0; padding: 0;}
+		ul{list-style: none;}
+		.box{
+			width: 300px;
+			border: 1px solid #f60;
+			margin: 100px auto;
+		}
+		ul li{height: 35px; line-height: 35px; cursor: pointer;}
+        ul li.even{background-color: skyblue;}
+        ul li.odd{background-color: #63a35c;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>lalallalalalal</li>
+			<li>lalallalalaaaa</li>
+			<li>lalalalalaaaaa</li>
+			<li>lalalalalalala</li>
+			<li>lalalalalalala</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+    window.onload = function () {
+        var lis = document.getElementsByTagName("li");
+        var div = document.getElementsByTagName("div")[0];
+        for(var i=0;i<lis.length;i++){
+            //设置隔行换色
+            if(i%2 == 0){
+                lis[i].className = "even";
+            }else{
+                lis[i].className = "odd";
+            }
+            //设置鼠标移入改变颜色
+            lis[i].onmouseover = function () {
+                this.style.backgroundColor = "red";
+            }
+            //设置鼠标移出还原原来的颜色
+            lis[i].onmouseout = function () {
+                this.style.backgroundColor = "";
+            }
+        }
+    }
+</script>

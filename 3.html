@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>短信倒计时</title>
+</head>
+<body>
+	<input type="button" id="btn" value="点击发送验证码">
+</body>
+</html>
+<script>
+	var oBtn = document.getElementById("btn");
+	var count = 5;
+	var timer = null;
+	oBtn.onclick = function(){
+		oBtn.value = count + "秒后重新发送";
+		setInterval(function(){
+			clearInterval(timer);
+        	oBtn.disabled = true;
+			oBtn.value = count +"秒后重新发送";
+		})
+	}
+</script>

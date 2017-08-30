@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			var txt = document.getElementById("txt");
+			var btn = document.getElementsByTagName("button");
+			btn[0].onclick = function(){   b/*tn后面的[0]意思是选择第几个按钮 如果没有的话不能直接给btn合集添加事件*/
+				var num = Number(txt.value);
+				alert(num + num);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button>点击</button>
+</body>
+</html>

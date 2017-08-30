@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div{margin: 0; padding: 0;}
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #f60;
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+            margin: 400px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var box = 0;
+        var oBox = document.getElementById("box");
+        var timer = null;
+        timer = setInterval(function () {
+            if(box>10){
+                clearInterval(timer);
+            }else{
+                box++;  // 1 2 3 4 5 6 7 8 9 10 11
+            }
+            oBox.innerHTML = box;
+        },1000);
+    </script>
+</body>
+</html>
